@@ -191,3 +191,23 @@ var sortArrayOfObjectsByTwoKeys = function (name, minor) {
 //exemplo:
 //s.sort(sortArrayOfObjectsByTwoKeys('last', sortArrayOfObjectsByTwoKeys('first')));
 
+
+// funcao para tentar carregar imagem,
+// executar somente quando a imagem terminar de carregar
+// e tratar erro se a imagem nao carregar
+function carregarImg(imgsrc) {
+    var img = new Image();
+
+    img.onload = function () { //a imagem foi encontrada e terminou de carregar
+        var $img = $(img);
+        //parece ser necessario adicionar um attr() para a $img ser identificada no DOM
+        $img.attr('class', 'foo').hide().appendTo('#bar');
+        $img.show();
+    };
+
+    img.onerror = function () {
+        //imgErro(); //chamar uma funcao para tratar erro
+    };
+
+    img.src = imgsrc; //neste momento acontece a requisicao da imagem
+}
