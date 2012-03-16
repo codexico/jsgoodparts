@@ -211,3 +211,7 @@ function carregarImg(imgsrc) {
 
     img.src = imgsrc; //neste momento acontece a requisicao da imagem
 }
+
+
+// http://www.adequatelygood.com/2011/4/Replacing-setTimeout-Globally
+window.setTimeout = window.setTimeout;
