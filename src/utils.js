@@ -215,3 +215,11 @@ function carregarImg(imgsrc) {
 
 // http://www.adequatelygood.com/2011/4/Replacing-setTimeout-Globally
 window.setTimeout = window.setTimeout;
+
+
+// https://gist.github.com/315916
+// everyone's new favorite closure pattern:
+(function(window, document, undefined) {
+    //...
+})(this, document);
+
