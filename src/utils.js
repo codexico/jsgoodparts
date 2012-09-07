@@ -295,3 +295,7 @@ function count() {
 function count() {
     return isNumber(count.i) ? ++count.i : count.i = 0;
 }
+//only one function to count all the vars
+function countvar(name) {
+    return isNumber(countvar[name]) ? ++countvar[name] : countvar[name] = 0;
+}
