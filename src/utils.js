@@ -278,3 +278,20 @@ var EventCache = function(){
 	};
 }();
 addEvent(window,'unload',EventCache.flush);
+
+
+
+
+
+//http://www.learncomputer.com/javascript-tricks-you-may-not-know/
+function count() {
+  if (typeof count.i == 'undefined') {
+    count.i = 0;
+  }
+  return count.i++;
+}
+//prefiro usar isNumber
+//http://jsfiddle.net/codexico/ePQ9D/
+function count() {
+    return isNumber(count.i) ? ++count.i : count.i = 0;
+}
